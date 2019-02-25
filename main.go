@@ -12,12 +12,12 @@ func main() {
 	k := []byte("hi")
 
 	x, y := curve.ScalarBaseMult(k)
-	fmt.Printf("x = %s, y = %s\n", x.String(), y.String())
+	fmt.Printf("x = %s, y = %s\n", x, y)
 
 	fmt.Println(curve.IsOnCurve(x, y))
 
 	x, y = curve.Double(x, y)
-	fmt.Printf("x = %s, y = %s\n", x.String(), y.String())
+	fmt.Printf("x = %s, y = %s\n", x, y)
 
 	fmt.Println(curve.IsOnCurve(x, y))
 }
