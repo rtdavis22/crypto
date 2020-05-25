@@ -26,11 +26,25 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:a4746994e0de90b81252c00616e6f904e5a8d03ec55da3ff3c447a7d5ddae7e1"
+  digest = "1:cf4352aecda79ab0ea8fa9b481985de37cae8ee0d01c68d9d9eb8d3d90a0e84a"
   name = "golang.org/x/crypto"
-  packages = ["sha3"]
+  packages = [
+    "chacha20",
+    "chacha20poly1305",
+    "internal/subtle",
+    "poly1305",
+    "sha3",
+  ]
   pruneopts = "UT"
-  revision = "ffb98f73852f696ea2bb21a617a5c4b3e067a439"
+  revision = "06a226fb4e3765ef3f48aa2852b401bc7b98e981"
+
+[[projects]]
+  branch = "master"
+  digest = "1:1268ac78d0362442f8bbe4e9266895cd6fb2a094910198ebc6d5db354e0ed05f"
+  name = "golang.org/x/sys"
+  packages = ["cpu"]
+  pruneopts = "UT"
+  revision = "05986578812163b26672dabd9b425240ae2bb0ad"
 
 [solve-meta]
   analyzer-name = "dep"
@@ -38,6 +52,8 @@
   input-imports = [
     "github.com/ethereum/go-ethereum/crypto",
     "github.com/ethereum/go-ethereum/crypto/secp256k1",
+    "golang.org/x/crypto/chacha20",
+    "golang.org/x/crypto/chacha20poly1305",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
